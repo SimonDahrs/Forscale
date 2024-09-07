@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import TopBar from "@/components/TopBar.vue";
+import HomeView from "@/views/HomeView.vue";
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import TopBar from "@/components/TopBar.vue";
     <TopBar />
   </header>
 
-  <RouterView />
+  <HomeView />
 </template>
 
 <style scoped>
