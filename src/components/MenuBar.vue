@@ -255,7 +255,7 @@ function toggleSubMenu(index) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: .5rem;
+  row-gap: .8rem;
 }
 
 #hamburger-menu-item-container.opened {
