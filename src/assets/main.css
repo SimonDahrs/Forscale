@@ -1,93 +1,98 @@
 @import './base.css';
 
 @font-face {
-    font-family: Noto Sans;
-    src: url('/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-family: Noto Sans;
+  src: url('/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: Red Hat;
-    src: url('/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  font-family: Red Hat;
+  src: url('/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: Roboto Flex;
-    src: url('/RobotoFlex.ttf') format('truetype');
+  font-family: Roboto Flex;
+  src: url('/RobotoFlex.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: Inter;
-    src: url('/Inter.ttf') format('truetype');
+  font-family: Inter;
+  src: url('/Inter.ttf') format('truetype');
 }
 
 main {
-    /*max-width: 1280px;*/
-    margin: 0 auto;
-    /*padding: 2rem;*/
-    font-weight: normal;
+  /*max-width: 1280px;*/
+  margin: 0 auto;
+  /*padding: 2rem;*/
+  font-weight: normal;
 }
 
 .content {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    font-size: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-size: 20px;
 }
 
 .section {
-    width: 100%;
-    padding: 2rem 0 2rem 0;
-    margin: 2rem 0 2rem 0;
+  width: 100%;
+  padding: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .section.blue {
-    background-color: rgb(var(--fsblue-A200));
+  background-color: rgb(var(--fsblue-A200));
 }
 
 .action-button {
-    font-family: Inter;
-    text-transform: capitalize;
-    font-size: 20px;
-    display: inline-block;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    scale: 1;
+  font-family: Inter;
+  text-transform: capitalize;
+  font-size: 20px;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  scale: 1;
 }
 .action-button:hover {
-    scale: 1.05;
+  scale: 1.05;
 }
 
 .action-button.white {
-    background-color: rgb(var(--fsblue-50));
-    color: black;
+  background-color: rgb(var(--fsblue-50));
+  color: black;
 }
 .action-button.white:hover {
-    background-color: rgb(var(--fsblue-100));
+  background-color: rgb(var(--fsblue-100));
 }
 .action-button.blue {
-    background-color: rgb(var(--fsblue-300));
-    color: white;
+  background-color: rgb(var(--fsblue-300));
+  color: white;
 }
 
 .action-button.blue:hover {
-    background-color: rgb(var(--fsblue-500));
+  background-color: rgb(var(--fsblue-500));
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a {
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 3px;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 3px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Inter;
-    font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter;
+  font-weight: bold;
 }
 
 /*@media (hover: hover) {*/
@@ -97,13 +102,13 @@ h1, h2, h3, h4, h5, h6 {
 /*}*/
 
 @media (min-width: 1024px) {
-    /*body {*/
-    /*  display: flex;*/
-    /*  place-items: center;*/
-    /*}*/
-    main {
-        /*display: grid;*/
-        /*grid-template-columns: 1fr 1fr;*/
-        /*padding: 0 2rem;*/
-    }
+  /*body {*/
+  /*  display: flex;*/
+  /*  place-items: center;*/
+  /*}*/
+  main {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*padding: 0 2rem;*/
+  }
 }

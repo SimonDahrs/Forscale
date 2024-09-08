@@ -1,23 +1,22 @@
 <script setup lang="ts">
-
-import HomeBanner from "@/components/HomeBanner.vue";
-import SellingPoints from "@/components/SellingPoints.vue";
-import AboutSection from "@/components/AboutSection.vue";
+import HomeBanner from '@/components/HomeBanner.vue'
+import SellingPoints from '@/components/SellingPoints.vue'
+import AboutSection from '@/components/AboutSection.vue'
 </script>
 
 <template>
   <main>
-    <HomeBanner id="banner"/>
+    <HomeBanner id="banner" />
     <div class="section">
       <div class="content">
         <h1>ABOUT US</h1>
-        <AboutSection/>
+        <AboutSection />
       </div>
     </div>
     <div class="section blue">
-      <h1 style="text-align:center">PRODUCTS</h1>
+      <h1 style="text-align: center">PRODUCTS</h1>
       <div class="content">
-        <SellingPoints/>
+        <SellingPoints />
       </div>
     </div>
   </main>
@@ -28,10 +27,8 @@ h1 {
 }
 
 #banner {
-  //z-index:-1;
+  //z-index: -1;
   //position: fixed;
   //top: 0;
 }
-
-
 </style>

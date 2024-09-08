@@ -1,43 +1,43 @@
 <script setup lang="ts">
-import {ref} from "vue";
-import IconDropdown from "@/components/icons/IconDropdown.vue";
-import IconUp from "@/components/icons/IconUp.vue";
+import { ref } from 'vue'
+import IconDropdown from '@/components/icons/IconDropdown.vue'
+import IconUp from '@/components/icons/IconUp.vue'
 
 const menuItems = ref([
   {
-    "text": "Products",
-    "link": "#",
-    "subitems": [
+    text: 'Products',
+    link: '#',
+    subitems: [
       {
-        "text": "ProjectWork",
-        "link": "#"
+        text: 'ProjectWork',
+        link: '#'
       },
       {
-        "text": "ProjectSheet",
-        "link": "#"
+        text: 'ProjectSheet',
+        link: '#'
       },
       {
-        "text": "PlanBoard",
-        "link": "#"
+        text: 'PlanBoard',
+        link: '#'
       }
     ]
   },
   {
-    "text": "Services",
-    "link": "#"
+    text: 'Services',
+    link: '#'
   },
   {
-    "text": "Support",
-    "link": "#"
+    text: 'Support',
+    link: '#'
   },
   {
-    "text": "Pricing",
-    "link": "#"
+    text: 'Pricing',
+    link: '#'
   },
   {
-    "text": "Contact",
-    "link": "#"
-  },
+    text: 'Contact',
+    link: '#'
+  }
 ])
 
 const activeIndex = ref(0)
@@ -61,30 +61,43 @@ function toggleSubMenu(index) {
     <div id="std-menu">
       <nav class="menu">
         <template v-for="(item, index) in menuItems" :key="index">
-          <a class="menu-item-top" href="#" v-if="'subitems' in item" @click="toggleSubMenu(index)"
-             :class="{active: activeIndex === index && subMenuActive}">
-            <IconDropdown class="icon-dd" v-if="!subMenuActive"/>
-            <IconUp v-else class="icon-dd"/>
+          <a
+            class="menu-item-top"
+            href="#"
+            v-if="'subitems' in item"
+            @click="toggleSubMenu(index)"
+            :class="{ active: activeIndex === index && subMenuActive }"
+          >
+            <IconDropdown class="icon-dd" v-if="!subMenuActive" />
+            <IconUp v-else class="icon-dd" />
             {{ item.text }}
           </a>
           <a class="menu-item-top" href="#" v-else>{{ item.text }}</a>
         </template>
       </nav>
-      <nav class="submenu" :class="{active: subMenuActive}">
+      <nav class="submenu" :class="{ active: subMenuActive }">
         <template v-for="(item, index) in menuItems[activeIndex].subitems" :key="index">
           <a class="menu-item-sub" href="#">{{ item.text }}</a>
         </template>
       </nav>
     </div>
     <div id="hamburger-menu">
-      <div id="hamburger-toggle" @click="hbmenuOpened = !hbmenuOpened" :class="{ opened: hbmenuOpened }">
+      <div
+        id="hamburger-toggle"
+        @click="hbmenuOpened = !hbmenuOpened"
+        :class="{ opened: hbmenuOpened }"
+      >
         <span class="button-icon" :class="{ opened: hbmenuOpened }" id="openMenu">☰</span>
         <span class="button-icon" :class="{ opened: hbmenuOpened }" id="closeMenu">✕</span>
       </div>
       <div id="hamburger-menu-item-container" :class="{ opened: hbmenuOpened }">
-        <a v-for="(item, index) in menuItems" :key="index" class="menu-item-sub" href="{{item.link}}">{{
-            item.text
-          }}</a>
+        <a
+          v-for="(item, index) in menuItems"
+          :key="index"
+          class="menu-item-sub"
+          href="{{item.link}}"
+          >{{ item.text }}</a
+        >
       </div>
     </div>
   </div>
@@ -114,7 +127,7 @@ function toggleSubMenu(index) {
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 3px;
@@ -152,7 +165,6 @@ function toggleSubMenu(index) {
   transform: scaleY(1);
 }
 
-
 .menu-item-sub {
   color: rgb(var(--fsblue-400));
 }
@@ -163,7 +175,7 @@ function toggleSubMenu(index) {
 
 #openMenu {
   opacity: 1;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: scale(1) rotate(0);
 }
 
@@ -172,7 +184,7 @@ function toggleSubMenu(index) {
 }
 
 #closeMenu {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: scale(0) rotate(-90deg);
 }
 
@@ -190,11 +202,11 @@ function toggleSubMenu(index) {
 #hamburger-menu {
   display: none;
   position: fixed;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   z-index: 5;
   display: none;
-  row-gap: .5rem;
+  row-gap: 0.5rem;
 }
 
 #hamburger-menu ul {
@@ -215,25 +227,27 @@ function toggleSubMenu(index) {
   text-align: center;
   align-items: center;
   cursor: pointer;
-  transition: transform .3s ease-out;
-  box-shadow: 0.1px 0.1px 0.3px rgba(0, 0, 0, 0.02),
-  0.1px 0.1px 0.8px rgba(0, 0, 0, 0.028),
-  0.3px 0.3px 1.5px rgba(0, 0, 0, 0.035),
-  0.4px 0.4px 2.7px rgba(0, 0, 0, 0.042),
-  0.8px 0.8px 5px rgba(0, 0, 0, 0.05),
-  2px 2px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease-out;
+  box-shadow:
+    0.1px 0.1px 0.3px rgba(0, 0, 0, 0.02),
+    0.1px 0.1px 0.8px rgba(0, 0, 0, 0.028),
+    0.3px 0.3px 1.5px rgba(0, 0, 0, 0.035),
+    0.4px 0.4px 2.7px rgba(0, 0, 0, 0.042),
+    0.8px 0.8px 5px rgba(0, 0, 0, 0.05),
+    2px 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 #hamburger-toggle:hover {
   background: rgb(var(--fsblue-300));
   color: white;
   transform: scale(1.1);
-  box-shadow: 0.4px 0.4px 0.3px rgba(0, 0, 0, 0.02),
-  1px 1px 0.8px rgba(0, 0, 0, 0.028),
-  1.9px 1.9px 1.5px rgba(0, 0, 0, 0.035),
-  3.4px 3.4px 2.7px rgba(0, 0, 0, 0.042),
-  6.3px 6.3px 5px rgba(0, 0, 0, 0.05),
-  15px 15px 12px rgba(0, 0, 0, 0.07);
+  box-shadow:
+    0.4px 0.4px 0.3px rgba(0, 0, 0, 0.02),
+    1px 1px 0.8px rgba(0, 0, 0, 0.028),
+    1.9px 1.9px 1.5px rgba(0, 0, 0, 0.035),
+    3.4px 3.4px 2.7px rgba(0, 0, 0, 0.042),
+    6.3px 6.3px 5px rgba(0, 0, 0, 0.05),
+    15px 15px 12px rgba(0, 0, 0, 0.07);
 }
 
 #hamburger-toggle.opened {
@@ -249,13 +263,13 @@ function toggleSubMenu(index) {
   box-shadow: 0 3px 10px rgb(0 1 1 / 0.3);
   border: 1px solid rgba(200, 200, 200, 0.3);
   border-radius: 7px;
-  transition: transform .15s;
+  transition: transform 0.15s;
   transform-origin: top;
   padding: 1.5rem 2rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: .8rem;
+  row-gap: 0.8rem;
 }
 
 #hamburger-menu-item-container.opened {
@@ -265,7 +279,6 @@ function toggleSubMenu(index) {
 #hamburger-menu-item-container a {
   color: rgb(var(--fsblue-500));
 }
-
 
 @media only screen and (max-width: 768px) {
   #std-menu {
@@ -277,5 +290,4 @@ function toggleSubMenu(index) {
     justify-items: end;
   }
 }
-
 </style>

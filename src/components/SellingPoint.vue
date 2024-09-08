@@ -19,8 +19,10 @@ defineProps({
   display: inline-block;
   background-color: rgb(var(--fsblue-500));
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   padding: 1rem;
   text-align: center;
   border-radius: var(--border-radius);
